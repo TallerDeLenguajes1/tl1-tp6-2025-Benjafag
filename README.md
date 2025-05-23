@@ -24,6 +24,6 @@
 - Buscar patrones en textos
 - Reemplazar texto automáticamente
 
-# ¿Cómo se hace uso de estas en C#?
+## ¿Cómo se hace uso de estas en C#?
 
 - En C#, se usan a través de la clase System.Text.RegularExpressions.Regex

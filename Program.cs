@@ -1,5 +1,7 @@
 ﻿// 1
 
+using System.Text.RegularExpressions;
+
 int numero;
 Console.WriteLine("Numero: ");
 
@@ -162,3 +164,18 @@ int indiceOperador(string cadena)
   }
   return resultado;
 }
+
+// 5
+// identificar si la cadena ingresada es una dirección web
+string patronURL = @"^https?:\/\/[\w\-\.]+\.\w{2,}(\S*)?$";
+Console.WriteLine("URL: ");
+string url = Console.ReadLine();
+bool esURL = Regex.IsMatch(url, patronURL);
+Console.WriteLine($"{( esURL ? "SI" : "NO")} es una url válida.");
+
+// identificar si un mail es válido.
+string patronCorreo = @"^[\w\.-]+@[\w\.-]+\.\w{2,}$";
+Console.WriteLine("Correo: ");
+string correo = Console.ReadLine();
+bool esCorreo = Regex.IsMatch(correo, patronCorreo);
+Console.WriteLine($"{( esCorreo ? "SI" : "NO")} es un correo válido.");
